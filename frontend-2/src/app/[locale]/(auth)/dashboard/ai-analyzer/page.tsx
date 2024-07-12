@@ -26,7 +26,7 @@ const AIAnalyzerPage: React.FC<Props> = () => {
         throw new Error('Failed to fetch feedbacks');
       }
       const data = await response.json();
-      setFeedbacks(data.data);
+      setFeedbacks(data?.data);
     } catch (err) {
       console.error(err);
       setError('Failed to load feedbacks. Please try again later.');
@@ -52,7 +52,7 @@ const AIAnalyzerPage: React.FC<Props> = () => {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">AI Feedback Analyzer</h1>
-      {feedbacks.length > 0 ? (
+      {feedbacks?.length > 0 ? (
         feedbacks.map(renderFeedback)
       ) : (
         <p>No feedbacks available.</p>
