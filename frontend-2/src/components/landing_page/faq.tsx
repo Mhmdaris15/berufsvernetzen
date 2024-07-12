@@ -11,46 +11,46 @@ const faqs = [
     question: "Who can use Berufsvernetzen?",
     answer: "Berufsvernetzen is open to alumni, current students, school staff, and other stakeholders."
   },
+  // {
+  //   question: "Is Berufsvernetzen free to use?",
+  //   answer: "Yes, Berufsvernetzen is completely free for all users."
+  // },
   {
-    question: "Is Berufsvernetzen free to use?",
-    answer: "Yes, Berufsvernetzen is completely free for all users."
-  },
-  {
-    question: "How do I sign up?",
-    answer: "You can sign up for Berufsvernetzen by following the registration process on our website."
+    question: "How do I Log In?",
+    answer: "You can log in after your school collaborates with us!."
   },
   {
     question: "How does Berufsvernetzen protect my privacy?",
     answer: "We prioritize the privacy and security of our users' personal information and have implemented measures to safeguard it."
   },
   {
-    question: "Can I search for job opportunities on Berufsvernetzen?",
-    answer: "Yes, you can explore job listings and opportunities available through Berufsvernetzen."
+    question: "Can Alumni search for job opportunities on Berufsvernetzen?",
+    answer: "Yes, Alumni can explore job listings and opportunities available through Berufsvernetzen."
   },
-  {
-    question: "Can I connect with other alumni on Berufsvernetzen?",
-    answer: "Absolutely! Berufsvernetzen provides networking features such as messaging, friend requests, and alumni directories to help you connect with fellow alumni."
-  },
+  // {
+  //   question: "Can I connect with other alumni on Berufsvernetzen?",
+  //   answer: "Absolutely! Berufsvernetzen provides networking features such as messaging, friend requests, and alumni directories to help you connect with fellow alumni."
+  // },
   {
     question: "How can my school benefit from Berufsvernetzen?",
     answer: "Schools can benefit from Berufsvernetzen by keeping track of alumni data, fostering alumni engagement, and accessing analytics and insights about their alumni network."
   },
-  {
-    question: "What types of events are hosted on Berufsvernetzen?",
-    answer: "Berufsvernetzen hosts events, webinars, and workshops related to career development and industry insights. You can participate or access recordings through the platform."
-  },
-  {
-    question: "How can I provide feedback or suggest new features?",
-    answer: "We welcome your feedback and feature requests! You can reach out to our support team through the provided channels."
-  },
+  // {
+  //   question: "What types of events are hosted on Berufsvernetzen?",
+  //   answer: "Berufsvernetzen hosts events, webinars, and workshops related to career development and industry insights. You can participate or access recordings through the platform."
+  // },
+  // {
+  //   question: "How can I provide feedback or suggest new features?",
+  //   answer: "We welcome your feedback and feature requests! You can reach out to our support team through the provided channels."
+  // },
   {
     question: "Is Berufsvernetzen accessible on mobile devices?",
     answer: "Yes, Berufsvernetzen is optimized for mobile use, allowing you to access it conveniently from your smartphone or tablet."
   },
-  {
-    question: "How can I delete my account?",
-    answer: "If you wish to delete your Berufsvernetzen account, you can follow the account deletion process outlined on our website."
-  }
+  // {
+  //   question: "How can I delete my account?",
+  //   answer: "If you wish to delete your Berufsvernetzen account, you can follow the account deletion process outlined on our website."
+  // }
 ];
 
 

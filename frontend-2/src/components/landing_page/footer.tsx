@@ -14,7 +14,7 @@ export default function Footer() {
               target="_blank"
               className="font-medium"
             >
-              Aris Septanugroho
+              Us
             </a>{" "}
             with ❤️
           </p>

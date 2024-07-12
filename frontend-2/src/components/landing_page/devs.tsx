@@ -20,7 +20,7 @@ const Devs = (props: Props) => {
       <h1 className={`text-3xl font-bold text-center ${theme == "dark" ? "text-white" : "text-gray-800"}`}>
         Meet The Developers!
       </h1>
-      <div className="flex flex-col md:flex-row justify-center gap-5 px-7 md:gap-10 mt-10">
+      <div className="flex flex-col md:flex-row md:flex-wrap justify-center gap-5 px-7 md:gap-10 mt-10">
         <Link
           href=""
           target="_blank"
