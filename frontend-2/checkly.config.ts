@@ -9,9 +9,9 @@ const emailChannel = new EmailAlertChannel('email-channel-1', {
 });
 
 export const config = defineConfig({
-  projectName: 'Next.js Boilerplate',
-  logicalId: 'nextjs-boilerplate',
-  repoUrl: 'https://github.com/ixartz/Next-js-Boilerplate',
+  projectName: 'Berufsvernetzen Frontend',
+  logicalId: 'berufsvernetzen-frontend',
+  repoUrl: 'https://github.com/Mhmdaris15/Berufsvernetzen',
   checks: {
     locations: ['us-east-1', 'eu-west-1'],
     tags: ['website'],
