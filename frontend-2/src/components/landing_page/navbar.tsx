@@ -25,9 +25,12 @@ import {
   User2,
   Webhook,
 } from "lucide-react";
+import Image from "next/image";
+import Logo from "@/public/Berufsvernetzen_Icon-removebg-preview.png";
+
 
 export default function NavBar() {
-  const menuItems = ["docs", "features", "pricing", "blog"];
+  const menuItems = ["jobs", "features", "dashboard", "surveys"];
 
   return (
     <Navbar isBlurred maxWidth="xl">
@@ -36,18 +39,40 @@ export default function NavBar() {
       </NavbarContent>
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
-          <span className="font-bold text-inherit text-lg">Berufsvernetzen</span>
+          {/* <span className="font-bold text-inherit text-lg">Berufsvernetzen</span> */}
+          <div className="w-20 h-20">
+            <Image
+              src={Logo}
+              alt="Berufsvernetzen Logo"
+              priority={true}
+              width={20}
+              height={20}
+              className="rounded-lg"
+            />
+
+          </div>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-5" justify="center">
-        <NavbarBrand>
-          <span className="font-bold text-2xl flex gap-3 justify-center items-center">
-          Berufsvernetzen
-          </span>
+        <NavbarBrand >
+          <div className="flex gap-2">
+            <Image
+              src={Logo}
+              alt="Berufsvernetzen Logo"
+              priority={true}
+              width={35}
+              height={35}
+              className="rounded-lg"
+            />
+            <p className="hidden font-bold text-2xl lg:block gap-3 justify-center items-center">
+              Berufsvernetzen
+            </p>
+
+          </div>
         </NavbarBrand>
         <NavbarItem>
           <Button as={Link} variant="light"
-          href="https://meili.mhmdaris15.tech/"
+            href="#"
           >
             Jobs
           </Button>
@@ -120,11 +145,11 @@ export default function NavBar() {
           <Button
             as={Link}
             color="primary"
-            href="/auth"
+            href="/sign-in"
             variant="solid"
             className="hidden sm:flex"
           >
-            Login / Register
+            Login
           </Button>
         </NavbarItem>
         <NavbarItem>
@@ -132,13 +157,39 @@ export default function NavBar() {
         </NavbarItem>
       </NavbarContent>
       <NavbarMenu>
-        {menuItems.map((item, index) => (
+        {/* {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link className="w-full" href="#" size="lg" color="foreground">
               {item}
             </Link>
           </NavbarMenuItem>
-        ))}
+        ))} */}
+        <NavbarMenuItem >
+          <Link className="w-full" href="#" size="lg" color="foreground">
+            Jobs
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem >
+          <Link className="w-full" href="#" size="lg" color="foreground">
+            Features
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem >
+          <Link className="w-full" href="#" size="lg" color="foreground">
+            Dashboard
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem >
+          <Link className="w-full" href="#" size="lg" color="foreground">
+            Surveys
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem >
+          <Link className="w-full" href="#" size="lg" color="foreground">
+            Log in
+          </Link>
+        </NavbarMenuItem>
+
       </NavbarMenu>
     </Navbar>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 
-export const SearchIcon = () => {
+export const SearchIcon = (props) => {
   return (
     <svg
       aria-hidden="true"
@@ -10,6 +10,7 @@ export const SearchIcon = () => {
       role="presentation"
       viewBox="0 0 24 24"
       width={18}
+      {...props}
     >
       <path
         className="stroke-default-400"
