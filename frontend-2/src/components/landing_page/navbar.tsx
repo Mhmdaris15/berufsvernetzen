@@ -72,7 +72,7 @@ export default function NavBar() {
         </NavbarBrand>
         <NavbarItem>
           <Button as={Link} variant="light"
-            href="#"
+            href="/user"
           >
             Jobs
           </Button>
@@ -180,12 +180,12 @@ export default function NavBar() {
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem >
-          <Link className="w-full" href="#" size="lg" color="foreground">
+          <Link className="w-full" href="/form/surveys" size="lg" color="foreground">
             Surveys
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem >
-          <Link className="w-full" href="#" size="lg" color="foreground">
+          <Link className="w-full" href="/sign-in" size="lg" color="foreground">
             Log in
           </Link>
         </NavbarMenuItem>
