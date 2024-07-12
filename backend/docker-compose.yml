@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+      - "9090:9090"
+    environment:
+      - GO_ENV=production
+      - MONGO_URI=mongodb://host.docker.internal:27017/berufsvernetzen
+      - MEILI_URI=https://meili.mhmdaris15.tech
+      - PORT=3000
+      - DATABASE_NAME=berufsvernetzen
+      - GRPC_PORT=9090
+      - PASETO_SYMMETRIC_KEY=Donadampfschiffahrtselektrizitat
+      - ACCESS_TOKEN_DURATION=1h
+      - MEILISEARCH_MASTER_KEY=tYMRWlEmPrIa4EtzCwXDKQV8jfvf0cVfTTpy1__KjGE
+      - MEILI_PRIMARY_KEY=072d46bcd9696dd0b80d1b4d05e8913e4c7649d067a5abd386a1d7d62502cfc6
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+volumes:
+  mongo_data:

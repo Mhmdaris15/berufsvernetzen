@@ -1,0 +1,159 @@
+syntax = "proto3";
+
+package berufsvernetzen;
+
+option go_package = "berufsvernetzen/";
+
+service ItemService {
+    rpc CreateItem (CreateItemRequest) returns (Item);
+    rpc GetItem (GetItemRequest) returns (Item);
+    rpc UpdateItem (UpdateItemRequest) returns (Item);
+    rpc DeleteItem (DeleteItemRequest) returns (DeleteResponse);
+}
+
+service SayHello {
+    rpc Hello (HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloResponse {
+    string message = 1;
+}
+
+message Item {
+    string id = 1;
+    string name = 2;
+    string description = 3;
+}
+
+message CreateItemRequest {
+    string name = 1;
+    string description = 2;
+}
+
+message GetItemRequest {
+    string id = 1;
+}
+
+message UpdateItemRequest {
+    string id = 1;
+    string name = 2;
+    string description = 3;
+}
+
+message DeleteItemRequest {
+    string id = 1;
+}
+
+message DeleteResponse {
+    bool success = 1;
+}
+
+message User {
+    string id = 1;
+    string name = 2;
+    string username = 3;
+    string email = 4;
+    string password = 5;
+    string whatsapp_number = 6;
+    string NIK = 7;
+    string address = 8;
+    string year_graduation = 9;
+    string birthday = 10;
+    string major = 11;
+    repeated string languages = 12;
+    repeated Experience experiences = 13;
+    string role = 14;
+    repeated Certification certifications = 15;
+    bytes photo = 16;
+    SocialMedia social_media = 17;
+
+}
+
+message SocialMedia {
+    string LinkedIn = 1;
+    string Facebook = 2;
+    string Instagram = 3;
+    string Github = 4;
+    string Twitter = 5;
+    string Youtube = 6;
+}
+
+message Experience {
+    string position = 1;
+    string year = 2;
+    string description = 3;
+}
+
+message Certification {
+    string name = 1;
+    string institution = 2;
+    string start_date = 3;
+    string expired_date = 4;
+}
+
+message CreateUserRequest {
+    User user = 1;
+}
+
+message CreateUserResponse {
+    User user = 1;
+}
+
+message GetAllUsersResponse {
+    repeated User users = 1;
+}
+
+message GetUserRequest {
+    string id = 1;
+}
+
+message GetUserResponse {
+    User user = 1;
+}
+
+message UpdateUserRequest {
+    string id = 1;
+    User user = 2;
+}
+
+message UpdateUserResponse {
+    User user = 1;
+}
+
+message DeleteUserRequest {
+    string id = 1;
+}
+
+message DeleteUserResponse {
+    string id = 1;
+    bool success = 2;
+}
+
+message EmptyRequest {
+    
+}
+
+message SeedRequest {
+    int32 count = 1;
+}
+
+message SeedResponse {
+    int32 count = 1;
+    bool success = 2;
+}
+
+service UserService {
+    rpc GetUsers(EmptyRequest) returns (GetAllUsersResponse);
+    rpc GetUser(GetUserRequest) returns (GetUserResponse);
+    rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
+    rpc UpdateUser(UpdateUserRequest) returns (UpdateUserResponse);
+    rpc DeleteUser(DeleteUserRequest) returns (DeleteUserResponse);
+}
+
+service SeedService {
+    rpc Seed(SeedRequest) returns (SeedResponse);
+}
