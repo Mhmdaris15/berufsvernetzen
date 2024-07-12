@@ -13,7 +13,7 @@ const DashboardAnalytics = () => {
     <>
       {all && (
         <iframe
-          src={`http://localhost:3000/html/survey`}
+          src={`https://berufsvernetzen.tech/html/survey`}
           style={{
             height: "100%",
           }}
@@ -21,7 +21,7 @@ const DashboardAnalytics = () => {
       )}
       {working && (
         <iframe
-          src={`http://localhost:3000/html/survey/working`}
+          src={`https://berufsvernetzen.tech/html/survey/working`}
           style={{
             height: "100%",
           }}
@@ -29,7 +29,7 @@ const DashboardAnalytics = () => {
       )}
       {study && (
         <iframe
-          src={`http://localhost:3000/html/survey/study`}
+          src={`https://berufsvernetzen.tech/html/survey/study`}
           style={{
             height: "100%",
           }}
@@ -37,7 +37,7 @@ const DashboardAnalytics = () => {
       )}
       {entrepreneurship && (
         <iframe
-          src={`http://localhost:3000/html/survey/entrepreneurship`}
+          src={`https://berufsvernetzen.tech/html/survey/entrepreneurship`}
           style={{
             height: "100%",
           }}
@@ -48,7 +48,7 @@ const DashboardAnalytics = () => {
           style={{
             height: "100%",
           }}
-          src={`http://localhost:3000/html/survey/unemployment`}
+          src={`https://berufsvernetzen.tech/html/survey/unemployment`}
         />
       )}
     </>
