@@ -40,14 +40,17 @@ export default function NavBar() {
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
           {/* <span className="font-bold text-inherit text-lg">Berufsvernetzen</span> */}
-          <Image
-            src={Logo}
-            alt="Berufsvernetzen Logo"
-            priority={true}
-            width={20}
-            height={20}
-            className="rounded-lg"
-          />
+          <div className="w-20 h-20">
+            <Image
+              src={Logo}
+              alt="Berufsvernetzen Logo"
+              priority={true}
+              width={20}
+              height={20}
+              className="rounded-lg"
+            />
+
+          </div>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-5" justify="center">
