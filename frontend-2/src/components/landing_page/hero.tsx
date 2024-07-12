@@ -69,7 +69,7 @@ export default function Hero() {
               All Alumni connected here!
             </Chip>
             <h1 className="text-2xl font-extrabold mx-auto md:text-5xl bg-gradient-to-b from-foreground to-foreground/70 text-transparent bg-clip-text">
-              Use Berufsvernetzen to help School Instance connect with Alumni.
+            Tracking Vocational School Alumni for Smarter Programs, Empowered Alumni, and Student Mentorship
 
             </h1>
             <p className="max-w-2xl mx-auto text-foreground/80">
