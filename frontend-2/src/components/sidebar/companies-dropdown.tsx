@@ -19,7 +19,7 @@ interface Company {
 
 export const CompaniesDropdown = () => {
   const [company, setCompany] = useState<Company>({
-    name: "Acme Co.",
+    name: "Berufsvernetzen",
     location: "Palo Alto, CA",
     logo: <AcmeIcon />,
   });
@@ -68,7 +68,7 @@ export const CompaniesDropdown = () => {
           }
           if (e === "4") {
             setCompany({
-              name: "Acme Co.",
+              name: "Berufsvernetzen",
               location: "Palo Alto, CA",
               logo: <AcmeIcon />,
             });
@@ -119,7 +119,7 @@ export const CompaniesDropdown = () => {
               title: "text-base font-semibold",
             }}
           >
-            Acme Co.
+            Berufsvernetzen
           </DropdownItem>
         </DropdownSection>
       </DropdownMenu>

@@ -19,10 +19,13 @@ import { FilterIcon } from "../icons/sidebar/filter-icon";
 import { useSidebarContext } from "../layout/layout-context";
 import { ChangeLogIcon } from "../icons/sidebar/changelog-icon";
 import { usePathname } from "next/navigation";
+import { title } from "process";
+import { useOptionAnalyticsStore } from "@/hooks/useOptionAnalyticsStore";
 
 export const SidebarWrapper = () => {
   const pathname = usePathname();
   const { collapsed, setCollapsed } = useSidebarContext();
+  const { setOneOption } = useOptionAnalyticsStore();
 
   return (
     <aside className="h-screen z-[202] sticky top-0">
@@ -47,21 +50,43 @@ export const SidebarWrapper = () => {
             />
             <SidebarMenu title="Main Menu">
               <SidebarItem
-                isActive={pathname === "/accounts"}
-                title="Accounts"
+                isActive={pathname === "/dashboard/ai-analyzer"}
+                title="AI Analyzer"
                 icon={<AccountsIcon />}
-                href="accounts"
+                href="dashboard/ai-analyzer"
               />
               <SidebarItem
-                isActive={pathname === "/payments"}
-                title="Payments"
+                isActive={pathname === "/dashboard/analytics"}
+                title="Analytics"
                 icon={<PaymentsIcon />}
+                href="dashboard/analytics"
+                onClick={() => setOneOption("all")}
               />
-              <CollapseItems
-                icon={<BalanceIcon />}
-                items={["Banks Accounts", "Credit Cards", "Loans"]}
-                title="Balances"
+             <SidebarItem
+                isActive={pathname === "/dashboard/analytics/working"}
+                title="Analytics Working"
+                icon={<PaymentsIcon />}
+                onClick={() => setOneOption("working")}
               />
+              <SidebarItem
+                isActive={pathname === "/dashboard/analytics/study"}
+                title="Analytics Study"
+                icon={<PaymentsIcon />}
+              onClick={() => setOneOption("study")}
+              />
+              <SidebarItem
+                isActive={pathname === "/dashboard/analytics/entrepreneurship"}
+                title="Analytics Entrepreneurship"
+                icon={<PaymentsIcon />}
+                onClick={() => setOneOption("entrepreneurship")}
+              />
+              <SidebarItem
+                isActive={pathname === "/dashboard/analytics/unemployment"}
+                title="Analytics Unemployment"
+                icon={<PaymentsIcon />}
+              onClick={() => setOneOption("unemployment")}
+/>
+
               <SidebarItem
                 isActive={pathname === "/customers"}
                 title="Customers"

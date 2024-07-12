@@ -21,7 +21,7 @@ export default withSentryConfig(
   withSentryConfig(
     bundleAnalyzer(
       withNextIntlConfig({
-        output: "standalone",
+        // output: "standalone",
         eslint: {
           ignoreDuringBuilds: true,
         },

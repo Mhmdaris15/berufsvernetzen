@@ -8,9 +8,10 @@ interface Props {
   icon: React.ReactNode;
   isActive?: boolean;
   href?: string;
+  onClick?: () => void;
 }
 
-export const SidebarItem = ({ icon, title, isActive, href = "" }: Props) => {
+export const SidebarItem = ({ icon, title, isActive, href = "", onClick = () => {}}: Props) => {
   const { collapsed, setCollapsed } = useSidebarContext();
 
   const handleClick = () => {
@@ -22,6 +23,7 @@ export const SidebarItem = ({ icon, title, isActive, href = "" }: Props) => {
     <NextLink
       href={href}
       className="text-default-900 active:bg-none max-w-full"
+      onClick={onClick}
     >
       <div
         className={clsx(
