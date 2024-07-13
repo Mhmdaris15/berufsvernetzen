@@ -180,7 +180,7 @@ export default function NavBar() {
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem >
-          <Link className="w-full" href="/form/surveys" size="lg" color="foreground">
+          <Link className="w-full" href="/user/surveys" size="lg" color="foreground">
             Surveys
           </Link>
         </NavbarMenuItem>
